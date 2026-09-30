@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 430" role="img" aria-label="Desktop Shell: launchd starts four background services at login. They share one settings domain and a change notification; the taskbar hides the Dock and tiles windows with Accessibility, the folders read your Desktop, the widgets read Music, and the hotkeys open Ghostty or ask the taskbar for Start.">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3b4a66"/></marker>
+    <style>
+      text{font-family:-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;fill:#14213d}
+      .t{font-size:14px;font-weight:600}.s{font-size:10.5px;fill:#55607a}.l{font-size:10.5px;fill:#3b4a66}.h{font-size:12px;font-weight:700;letter-spacing:.12em;fill:#2456c8}
+      .svc{fill:#fff;stroke:#9db8e8}.os{fill:#eaf0fb;stroke:#b7c6e6}.bus{fill:#fff6d8;stroke:#e5c25e}
+      line,polyline{stroke:#3b4a66;stroke-width:1.4;fill:none}
+    </style>
+  </defs>
+  <rect width="1000" height="430" rx="18" fill="#f5f8fe"/>
+  <text x="20" y="32" class="h">MACOS</text><text x="300" y="32" class="h">DESKTOP SHELL SERVICES</text><text x="760" y="32" class="h">WHAT THEY TOUCH</text>
+
+  <rect x="20" y="170" width="220" height="70" rx="10" class="os"/><text x="34" y="196" class="t">launchd</text><text x="34" y="214" class="s">starts each at login,</text><text x="34" y="229" class="s">restarts it if it crashes</text>
+
+  <rect x="300" y="50" width="400" height="62" rx="10" class="svc"/><text x="314" y="74" class="t">XP Taskbar</text><text x="314" y="92" class="s">taskbar, Start menu, Desktop Settings, Downloads window,</text><text x="314" y="105" class="s">window tiler that keeps apps clear of the strips</text>
+  <rect x="300" y="130" width="400" height="50" rx="10" class="svc"/><text x="314" y="152" class="t">Desktop Folders</text><text x="314" y="169" class="s">each Desktop folder as an iOS-style folder</text>
+  <rect x="300" y="198" width="400" height="50" rx="10" class="svc"/><text x="314" y="220" class="t">Desktop Widgets</text><text x="314" y="237" class="s">Now Playing, calendar, battery, CPU / memory, storage</text>
+  <rect x="300" y="266" width="400" height="50" rx="10" class="svc"/><text x="314" y="288" class="t">Desktop Hotkeys</text><text x="314" y="305" class="s">⌘⌃T → Ghostty · tap ⌥ Option → Start</text>
+  <rect x="300" y="345" width="400" height="62" rx="10" class="bus"/><text x="314" y="369" class="t">ShellKit · shared settings</text><text x="314" y="387" class="s">one preferences domain + a "changed" notification every service</text><text x="314" y="400" class="s">listens to; a tiling map so windows avoid the taskbar and widgets</text>
+
+  <rect x="760" y="50" width="220" height="62" rx="10" class="os"/><text x="774" y="74" class="t">Dock &amp; app windows</text><text x="774" y="92" class="s">Dock hidden while it runs;</text><text x="774" y="105" class="s">windows moved (Accessibility)</text>
+  <rect x="760" y="130" width="220" height="50" rx="10" class="os"/><text x="774" y="152" class="t">~/Desktop</text><text x="774" y="169" class="s">read to show your folders</text>
+  <rect x="760" y="198" width="220" height="50" rx="10" class="os"/><text x="774" y="220" class="t">Music · system stats</text><text x="774" y="237" class="s">what's playing, battery, CPU</text>
+  <rect x="760" y="266" width="220" height="50" rx="10" class="os"/><text x="774" y="288" class="t">Ghostty</text><text x="774" y="305" class="s">a terminal on this Space</text>
+
+  <polyline points="240,205 270,205 270,81 298,81" marker-end="url(#a)"/>
+  <line x1="270" y1="155" x2="298" y2="155" marker-end="url(#a)"/>
+  <line x1="240" y1="223" x2="298" y2="223" marker-end="url(#a)"/>
+  <polyline points="270,223 270,291 298,291" marker-end="url(#a)"/>
+  <text x="226" y="258" class="l">starts each</text>
+
+  <line x1="700" y1="81" x2="758" y2="81" marker-end="url(#a)"/>
+  <line x1="700" y1="155" x2="758" y2="155" marker-end="url(#a)"/>
+  <line x1="700" y1="223" x2="758" y2="223" marker-end="url(#a)"/>
+  <line x1="700" y1="291" x2="758" y2="291" marker-end="url(#a)"/>
+  <text x="712" y="340" class="s">Desktop Settings (Start menu) writes the settings;</text>
+  <text x="712" y="354" class="s">every service re-reads and redraws.</text>
+</svg>
