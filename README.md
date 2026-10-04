@@ -99,3 +99,7 @@ with AI help: it's a tested personal project, not an audited product.
 No accounts, analytics or telemetry. Nothing leaves your Mac except the Now Playing widget's lookups
 of album artwork on Apple's public iTunes Search API and Apple Music pages (and YouTube's embedded
 player, if you turn on its YouTube loop).
+
+## Licence
+
+Released under the [MIT License](LICENSE). It comes with no warranty.
