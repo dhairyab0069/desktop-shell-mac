@@ -1,6 +1,6 @@
 import AppKit
 
-/// The tiling map of the main screen, shared by every Himawari process: which
+/// The tiling map of the main screen, shared by every Desktop Shell process: which
 /// strips are reserved (widgets, folders, taskbar), and what's left over for
 /// app windows and the clock.
 ///
@@ -13,7 +13,7 @@ public enum DesktopLayout {
         case widgets, folders, taskbar
     }
 
-    public static let gap: CGFloat = 8
+    public static let gap: CGFloat = 8  // clear space left beside a reserved strip
 
     /// Publish (or clear, with nil) a reserved strip, in AppKit screen coordinates.
     public static func setZone(_ zone: Zone, _ rect: NSRect?) {
@@ -39,7 +39,7 @@ public enum DesktopLayout {
 
     /// Remove an edge-attached zone from `area` by trimming whichever side
     /// loses the least space while fully clearing the zone (plus a gap).
-    private static func cut(_ zone: NSRect, from area: NSRect) -> NSRect {
+    static func cut(_ zone: NSRect, from area: NSRect) -> NSRect {
         guard area.intersects(zone) else { return area }
         let trimLeft = zone.maxX + gap - area.minX
         let trimRight = area.maxX - (zone.minX - gap)

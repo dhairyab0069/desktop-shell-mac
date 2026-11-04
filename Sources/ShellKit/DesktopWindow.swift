@@ -6,7 +6,7 @@ import SwiftUI
 /// every desktop click, so anything clickable must sit above it. App windows
 /// are far above all of these.
 public enum DesktopLayer {
-    public static let video = 1        // Himawari's video wallpaper
+    public static let video = 1        // a video wallpaper (such as Himawari's)
     public static let decorations = 2  // the clock (click-through, so below Finder is fine)
     public static let folders = 22     // folder dock: above Finder's icons so clicks reach it
     public static let overlay = 23     // an opened folder
@@ -42,7 +42,7 @@ public final class DesktopWindow: NSWindow {
     }
 }
 
-/// Reacts to the very first click even though Himawari isn't the active app
+/// Reacts to the very first click even though the app isn't the active one
 /// (otherwise the first click would only activate it).
 public final class FirstClickHostingView<Content: View>: NSHostingView<Content> {
     override public func acceptsFirstMouse(for event: NSEvent?) -> Bool { true }

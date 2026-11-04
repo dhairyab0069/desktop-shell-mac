@@ -140,7 +140,7 @@ public final class Settings {
         set { defaults.set(newValue, forKey: "showTaskbar") }
     }
 
-    /// ⌃T opens Ghostty from anywhere.
+    /// ⌘⌃T opens Ghostty from anywhere.
     public var ghosttyHotkey: Bool {
         get { bool("ghosttyHotkey") }
         set { defaults.set(newValue, forKey: "ghosttyHotkey") }

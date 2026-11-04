@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Swift version
+        run: swift --version
+      - name: Build
+        run: swift build
+      - name: Test
+        run: swift test
+      - name: Shell scripts parse
+        run: for f in build.sh install.sh desktopctl scripts/shell.sh tools/make_signing_identity.sh; do bash -n "$f"; done
