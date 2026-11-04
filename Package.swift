@@ -18,5 +18,6 @@ let package = Package(
         .executableTarget(name: "DesktopFolders", dependencies: ["ShellKit"], path: "Sources/DesktopFolders"),
         .executableTarget(name: "DesktopWidgets", dependencies: ["ShellKit"], path: "Sources/DesktopWidgets"),
         .executableTarget(name: "DesktopHotkeys", dependencies: ["ShellKit"], path: "Sources/DesktopHotkeys"),
+        .testTarget(name: "ShellKitTests", dependencies: ["ShellKit"], path: "Tests/ShellKitTests"),
     ]
 )

@@ -69,7 +69,7 @@ Privacy & Security**, then run `./desktopctl restart all`.
 
 | Service | Permission | Why |
 |---|---|---|
-| XP Taskbar | **Accessibility** | The window tiler, and Start search. |
+| XP Taskbar | **Accessibility** | The window tiler (Keep Windows Clear), and the Start menu's Spotlight Search row, which sends ⌘Space. |
 | XP Taskbar | **Downloads folder** | The Downloads window. |
 | Desktop Folders | **Desktop folder** | Shows your folders. |
 | Desktop Widgets | **Automation ▸ Music** | Now Playing. |
@@ -84,8 +84,19 @@ Privacy & Security**, then run `./desktopctl restart all`.
 | `Sources/DesktopWidgets/` | The widget panel. |
 | `Sources/DesktopHotkeys/` | The hotkeys service. |
 | `Sources/ShellKit/` | Shared: look, desktop windows, settings, tiling map, Now Playing, power state. |
+| `Tests/ShellKitTests/` | Unit tests for the tiling map and widget-edge settings. |
 | `build.sh`, `install.sh`, `scripts/shell.sh`, `desktopctl` | Build, install / remove, and control the services. |
 | `tools/make_signing_identity.sh` | A local code-signing identity so permissions survive rebuilds. |
+
+## Build and test
+
+```bash
+swift build        # debug build of all four services and ShellKit
+swift test         # runs the ShellKit unit tests
+./build.sh         # release build, wrapped into the four .app bundles in build/
+```
+
+`.github/workflows/ci.yml` runs `swift build` and `swift test` on macOS for every push and pull request.
 
 ## AI assistance
 
